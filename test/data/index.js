@@ -8,7 +8,7 @@ module.exports = {
   },
   subject: {
     board: 'wsg',
-    threadNo: 2332032,
+    threadNo: 6049429,
     json: require('./subject-thread.json')
   },
   empty: {
