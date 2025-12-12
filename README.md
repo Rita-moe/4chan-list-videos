@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/scootykins/4chan-list-webm/badge.svg?branch=master)](https://coveralls.io/github/scootykins/4chan-list-webm?branch=master)
 [![install size](https://packagephobia.now.sh/badge?p=4chan-list-webm)](https://packagephobia.now.sh/result?p=4chan-list-webm)
 
-Generate a list of webms posted in a thread.
+Generate a list of webms (and mp4s) posted in a thread.
 
 Here's a little [demonstration](https://www.4webm.org/) of `4chan-list-webm` in action (plz star).
 
@@ -48,13 +48,13 @@ run()
 
 #### listWebm(board, threadNo, config)
 
-Returns a promise that resolves to data about webms within a thread (see payload).
+Returns a promise that resolves to data about videos within a thread (see payload).
 
 #### url
 
 Type: `String`
 
-The URL of the thread. The thumbnail and webm links will use `https` if an `https` request is made.
+The URL of the thread. The thumbnail and video links will use `https` if an `https` request is made.
 
 #### board
 
@@ -86,32 +86,24 @@ Below an example payload. Note that the subject key will be omitted if the threa
 
 ```json
 {
-  "subject": "Hawkeye being epic in other roles",
+  "subject": "MELANCHOLY",
+  "mp4s": [
+    {
+      "filename": "Gymnopédie No. 1",
+      "thumbnail": "http://i.4cdn.org/wsg/1765509110095819s.jpg",
+      "url": "http://i.4cdn.org/wsg/1765509110095819.mp4"
+    },
+    {
+      "filename": "LoLa &amp; Hauser - Love Story",
+      "thumbnail": "http://i.4cdn.org/wsg/1765509203849104s.jpg",
+      "url": "http://i.4cdn.org/wsg/1765509203849104.mp4"
+    }
+  ],
   "webms": [
     {
-      "filename": "1534288775634",
-      "url": "http://i.4cdn.org/wsg/1534332395477.webm",
-      "thumbnail": "http://i.4cdn.org/wsg/1534332395477s.jpg"
-    },
-    {
-      "filename": "1534288802449",
-      "url": "http://i.4cdn.org/wsg/1534332452014.webm",
-      "thumbnail": "http://i.4cdn.org/wsg/1534332452014s.jpg"
-    },
-    {
-      "filename": "1534288878879",
-      "url": "http://i.4cdn.org/wsg/1534332526405.webm",
-      "thumbnail": "http://i.4cdn.org/wsg/1534332526405s.jpg"
-    },
-    {
-      "filename": "Dahmer (2002)",
-      "url": "http://i.4cdn.org/wsg/1534799616292.webm",
-      "thumbnail": "http://i.4cdn.org/wsg/1534799616292s.jpg"
-    },
-    {
-      "filename": "Bourne_legacy",
-      "url": "http://i.4cdn.org/wsg/1535117894788.webm",
-      "thumbnail": "http://i.4cdn.org/wsg/1535117894788s.jpg"
+      "filename": "conspiracy-alright",
+      "thumbnail": "http://i.4cdn.org/wsg/1765509046233024s.jpg",
+      "url": "http://i.4cdn.org/wsg/1765509046233024.webm"
     }
   ]
 }
