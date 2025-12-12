@@ -1,13 +1,17 @@
 {
-  "name": "4chan-list-webm",
-  "version": "0.0.0-development",
-  "description": "Generate a list of webms posted in a 4chan thread",
+  "name": "@ritamoe/4chan-list-videos",
+  "version": "0.0.1",
+  "description": "Generate a list of videos posted in a 4chan thread",
   "main": "./index.js",
-  "author": "scootykins <scootykins@yahoo.com>",
+  "author": "Kody <kody@rita.moe>",
+  "contributors": [
+    "scootykins <scootykins@yahoo.com>"
+  ],
   "license": "MIT",
   "keywords": [
     "4chan",
     "webm",
+    "mp4",
     "download",
     "json",
     "4webm",
@@ -15,36 +19,23 @@
     "thegame"
   ],
   "scripts": {
-    "fix": "eslint . --fix",
-    "lint": "eslint .",
+    "fix": "standard --fix",
+    "lint": "standard",
     "watch": "nyc mocha --watch",
-    "test": "yarn run lint && nyc mocha --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "test": "pnpm run lint && nyc mocha --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/scootykins/4chan-list-webm.git"
-  },
-  "dependencies": {
-    "axios": "^0.17.1"
+    "url": "https://github.com/Rita-moe/4chan-list-videos.git"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "coveralls": "^3.0.2",
-    "dirty-chai": "^2.0.1",
-    "eslint": "^5.4.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "mocha": "^5.0.0",
-    "nock": "^9.6.1",
-    "nyc": "^11.7.1",
-    "semantic-release": "^15.9.12",
-    "travis-deploy-once": "^5.0.4"
+    "chai": "^6.2.1",
+    "coveralls": "^3.1.1",
+    "mocha": "^11.7.5",
+    "nock": "^14.0.10",
+    "nyc": "^17.1.0",
+    "standard": "^17.1.2"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "pnpm@10.25.0"
 }

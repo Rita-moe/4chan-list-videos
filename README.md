@@ -1,38 +1,33 @@
-# 4chan-list-webm
+# 4chan-list-videos
 
-[![npm version](https://badge.fury.io/js/4chan-list-webm.svg)](https://badge.fury.io/js/4chan-list-webm)
-[![Build Status](https://travis-ci.org/scootykins/4webm.svg?branch=master)](https://travis-ci.org/scootykins/4webm)
-[![Coverage Status](https://coveralls.io/repos/github/scootykins/4chan-list-webm/badge.svg?branch=master)](https://coveralls.io/github/scootykins/4chan-list-webm?branch=master)
-[![install size](https://packagephobia.now.sh/badge?p=4chan-list-webm)](https://packagephobia.now.sh/result?p=4chan-list-webm)
-
-Generate a list of webms (and mp4s) posted in a thread.
+Generate a list of webms and mp4s posted in a thread.
 
 Here's a little [demonstration](https://www.4webm.org/) of `4chan-list-webm` in action (plz star).
 
 ## Installation
 
 ```bash
-$ yarn add 4chan-list-webm
+$ pnpm add @ritamoe/4chan-list-videos
 
 # OR
 
-$ npm install --save 4chan-list-webm
+$ npm install --save @ritamoe/4chan-list-videos
 ```
 
 ## Usage
 
 ```js
-const listWebms = require('4chan-list-webm')
+const listVideos = require('@ritamoe/4chan-list-videos')
 
 // promise
-listWebms('wsg', 2045456)
-  .then(data => console.log(data.webms))
+listVideos('wsg', 2045456)
+  .then(data => console.log(data))
   .catch(err => console.error('404!', err))
 
 // async/await
 async function run () {
   try {
-    const data = await listWebms('http://boards.4chan.org/wsg/thread/2045456')
+    const data = await listVideos('http://boards.4chan.org/wsg/thread/2045456')
     console.log(data)
   } catch (err) {
     console.error('Whoa! 404! :c', err)
@@ -44,9 +39,9 @@ run()
 
 ## API
 
-#### listWebm(url)
+#### listVideos(url)
 
-#### listWebm(board, threadNo, config)
+#### listVideos(board, threadNo, config)
 
 Returns a promise that resolves to data about videos within a thread (see payload).
 
@@ -130,4 +125,4 @@ You will get an `403 Forbidden error` if you try to load the thumbnails via inli
 
 ## Disclaimer
 
-The creator of `4chan-list-webm` is not associated with 4chan.org in any way.
+The creator of `4chan-list-videos` is not associated with 4chan.org in any way.
