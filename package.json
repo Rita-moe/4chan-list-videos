@@ -18,7 +18,7 @@
     "fix": "eslint . --fix",
     "lint": "eslint .",
     "watch": "nyc mocha --watch",
-    "test": "yarn run lint && nyc mocha",
+    "test": "yarn run lint && nyc mocha --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -45,5 +45,6 @@
     "nyc": "^11.7.1",
     "semantic-release": "^15.9.12",
     "travis-deploy-once": "^5.0.4"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
