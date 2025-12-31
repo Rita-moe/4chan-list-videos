@@ -1,6 +1,6 @@
 {
   "name": "@ritamoe/4chan-list-videos",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate a list of videos posted in a 4chan thread",
   "main": "./index.js",
   "author": "Kody <kody@rita.moe>",
@@ -30,12 +30,12 @@
     "url": "https://github.com/Rita-moe/4chan-list-videos.git"
   },
   "devDependencies": {
-    "chai": "^6.2.1",
+    "chai": "^6.2.2",
     "coveralls": "^3.1.1",
     "mocha": "^11.7.5",
     "nock": "^14.0.10",
     "nyc": "^17.1.0",
     "standard": "^17.1.2"
   },
-  "packageManager": "pnpm@10.25.0"
+  "packageManager": "pnpm@10.27.0"
 }

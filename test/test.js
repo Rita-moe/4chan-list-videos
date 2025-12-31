@@ -30,12 +30,12 @@ describe('4chan-list-videos gets video URLs from a thread', () => {
       : { http: false }
 
     describe(`Behaviour with ${protocol}`, () => {
-      it('returns an empty list when no webms are present', async () => {
+      it('returns an empty list when no videos are present', async () => {
         const { board, threadNo } = payloads.empty
         const expected = require(`./expected/${protocol}-empty-thread.json`)
         const result = await listVideos(board, threadNo, config)
 
-        expect(expected.webms.length).to.equal(0)
+        expect(expected.videos.length).to.equal(0)
         expect(result).to.deep.equal(expected)
       })
 
@@ -48,12 +48,12 @@ describe('4chan-list-videos gets video URLs from a thread', () => {
         expect(result).to.deep.equal(expected)
       })
 
-      it('returns an array of objects containing webm data', async () => {
+      it('returns an array of objects containing video data', async () => {
         const { board, threadNo } = payloads.normal
         const expected = require(`./expected/${protocol}-normal-thread.json`)
         const result = await listVideos(board, threadNo, config)
 
-        expect(expected.webms[0]).to.have.all.keys('url', 'filename', 'thumbnail')
+        expect(expected.videos[0]).to.have.all.keys('url', 'filename', 'thumbnail')
         expect(expected.subject).to.equal(undefined)
         expect(result).to.deep.equal(expected)
       })
@@ -76,7 +76,7 @@ describe('4chan-list-videos gets video URLs from a thread', () => {
 
       const threadData = await listVideos(board, threadNo)
 
-      expect(threadData.webms).to.be.an('array')
+      expect(threadData.videos).to.be.an('array')
     })
   })
 

@@ -1,5 +1,11 @@
 {
-  "mp4s": [
+  "subject": "MELANCHOLY",
+  "videos": [
+    {
+      "filename": "conspiracy-alright",
+      "thumbnail": "https://i.4cdn.org/wsg/1765509046233024s.jpg",
+      "url": "https://i.4cdn.org/wsg/1765509046233024.webm"
+    },
     {
       "filename": "Gymnopédie No. 1",
       "thumbnail": "https://i.4cdn.org/wsg/1765509110095819s.jpg",
@@ -9,14 +15,6 @@
       "filename": "LoLa &amp; Hauser - Love Story",
       "thumbnail": "https://i.4cdn.org/wsg/1765509203849104s.jpg",
       "url": "https://i.4cdn.org/wsg/1765509203849104.mp4"
-    }
-  ],
-  "subject": "MELANCHOLY",
-  "webms": [
-    {
-      "filename": "conspiracy-alright",
-      "thumbnail": "https://i.4cdn.org/wsg/1765509046233024s.jpg",
-      "url": "https://i.4cdn.org/wsg/1765509046233024.webm"
     }
   ]
 }

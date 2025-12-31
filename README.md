@@ -82,23 +82,21 @@ Below an example payload. Note that the subject key will be omitted if the threa
 ```json
 {
   "subject": "MELANCHOLY",
-  "mp4s": [
+  "videos": [
+    {
+      "filename": "conspiracy-alright",
+      "thumbnail": "https://i.4cdn.org/wsg/1765509046233024s.jpg",
+      "url": "https://i.4cdn.org/wsg/1765509046233024.webm"
+    },
     {
       "filename": "Gymnopédie No. 1",
-      "thumbnail": "http://i.4cdn.org/wsg/1765509110095819s.jpg",
-      "url": "http://i.4cdn.org/wsg/1765509110095819.mp4"
+      "thumbnail": "https://i.4cdn.org/wsg/1765509110095819s.jpg",
+      "url": "https://i.4cdn.org/wsg/1765509110095819.mp4"
     },
     {
       "filename": "LoLa &amp; Hauser - Love Story",
-      "thumbnail": "http://i.4cdn.org/wsg/1765509203849104s.jpg",
-      "url": "http://i.4cdn.org/wsg/1765509203849104.mp4"
-    }
-  ],
-  "webms": [
-    {
-      "filename": "conspiracy-alright",
-      "thumbnail": "http://i.4cdn.org/wsg/1765509046233024s.jpg",
-      "url": "http://i.4cdn.org/wsg/1765509046233024.webm"
+      "thumbnail": "https://i.4cdn.org/wsg/1765509203849104s.jpg",
+      "url": "https://i.4cdn.org/wsg/1765509203849104.mp4"
     }
   ]
 }
